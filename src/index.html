@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  <link rel="stylesheet" href="sytles/styleMain.css">
+  <link rel="stylesheet" href="sytles/stylesRadio.css">
+
+  <!--Fuentes de letras Google-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+  <!-- flaviticon-->
+  <link rel="shortcut icon" type="image/x-icon" href="./assets/EdbyteIcono.ico">
+  
+  <script defer src="./radio.js"></script>
+  
+  <title>Edgar López</title>
+</head>
+<body>
+  <header>
+    <section class="logoredes">
+      <a href="index.html" class="logoedbyte"> </a>
+      <section class="redes">
+        <!--social media-->
+        <a href="https://facebook.com/edgaredlopez" target="_blank" class="facebook"> </a>
+        <a href="https://wa.me/5213310000000" target="_blank" class="whatsapp"> </a>
+        <a href="https://github.com/edgaredlopez" target="_blank" class="github"> </a>
+        <a href="https://linkedin.com/in/edgaredlopez" target="_blank" class="linkedin"> </a>
+        <a href="https://instagram.com/edgaredlopez" target="_blank" class="instagram"> </a>
+      </section>
+    </section>
+
+    <ul class="menu">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="proyects.html">Proyectos</a></li>
+      <li><a href="resources.html">Recursos</a></li>
+      <li><a href="contact.html">Sobre mí</a></li>
+    </ul>
+    
+    </header>
+
+
+
+  <main>
+    <section class="ParaFondoDiagonal"></section>
+    <section class="presentacion">
+      <div class="presentacion__informacion">
+        <h1 class="Nombre">Edgar López </h1><span>@edgaredlopez</span>
+        <p class="Descripcion">Ingeniero en Sistemas y TIC's - Fundador de Edbyte Technologies - Programador FullStack-  Administrador de Bases de Datos - Administrador de Redes y Servidores -   #JAVA, #JAVASCRIPT, #NODEJS, #CSS, #REACTJS, #EXPRESJS, #MYSQL, #POSTGRESQL</p>
+      </div>
+      <div class="presentacion__fotografia">
+        <img src="./assets/Edgar-Lopez-Platzi(1).jpg" alt="Foto de perfil">
+      </div>
+    </section>
+
+
+    <section class="MainRadio">
+      <h2>Radio Edbyte 24/7</h2>
+      <p class="DescripcionGeneralRadio">Una radio diseñada para trabajar y concentrarse. Disponible 24/7 con las mejores melodías, completamente en vivo </p>
+      
+      <div class="MainRadio__CajaReproductor" id="MainRadio__CajaReproductor">
+        <img class="cover" id="cover"
+          src="https://coderadio-admin.freecodecamp.org/api/station/2/art/eefaa5a505ada63e796384ce-1586028052.jpg"
+          alt="Cover de la música en la radio">
+        <p id="title">Título</p>
+        <p id="artist">Artista</p>
+        <p id="album">Album</p>
+    
+        <audio controls>
+          <source id="direccionAudioRadio" src="https://coderadio-admin.freecodecamp.org/radio/8010/radio.mp3" type="audio/mpeg">
+        </audio>
+        <p class="Oyentes">Oyentes en vivo: <span id="oyentes">50</span></p>
+      </div>
+
+      
+    </section>
+
+  </main>
+  <footer>
+  </footer>
+</body>
+</html>

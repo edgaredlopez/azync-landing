@@ -1,0 +1,199 @@
+
+/*
+    --------Convencion de buenas practicas para el codigo css--------
+
+    1. Posicionamiento --> static, absolute, relative, fixed
+    2. Modelo de caja (Box model) --> margin, border, padding, content
+    3. Tipografía --> tipos, tamaños de fuente, etc
+    4. Estilos visuales --> box-shadow, border-radius, gradient, etc
+    5. Otros --> reglas CSS y más
+*/
+:root
+{
+    --ColorFondo: #ffffff;
+    --ColorPrimario: #45bce4;
+    --ColorSecundario: ##45bce4;
+    --ColorTerciario: #2ca6f77a;
+    --ColorTexto: #000000;
+    --ColorTextoSecundario: #5c5c5c;
+}
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html
+{
+    font-size: 62.5%;
+    font-family: 'DM Sans', sans-serif;
+}
+
+header
+{
+    width: 100%;
+    min-width: 350px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+header .logoredes
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+header .logoedbyte
+{
+    width: 6rem;
+    height: 5rem; 
+    margin-left: 10px;
+    margin-top: 10px;  
+    background-image: url("../assets/logo.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+header .logoredes .redes
+{
+    display: flex;
+    align-items: end;
+    margin-right: 15px;
+}
+header .redes a
+{
+    text-decoration: none;
+    width: 2rem;
+    height: 2rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 1rem;
+}
+header .redes .facebook
+{
+    background-image: url("../assets/icons/facebook.png");
+}
+header .redes .whatsapp
+{
+    background-image: url("../assets/icons/whatsapp.png");
+}
+header .redes .github
+{
+    background-image: url("../assets/icons/github.png");
+}
+header .redes .linkedin
+{
+    background-image: url("../assets/icons/linkedin.png");
+}
+header .redes .instagram
+{
+    background-image: url("../assets/icons/instagram.png");
+}
+
+
+header .menu
+{
+    width: 100%;
+    max-width: 420px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    min-width: 350px;
+    margin-top: 1rem;
+}
+header .menu li 
+{
+    list-style: none;
+}
+header .menu a
+{
+    text-decoration: none;
+    color: var(--ColorTexto);
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+
+
+
+
+/*----------------MAIN------------------*/
+
+main
+{
+    position: relative;
+}
+/*
+main .ParaFondoDiagonal
+{
+    display: flex;
+    position: absolute;
+    height: 200px;
+    width: 100%;
+    top: 500px;
+    z-index: -1;
+    background-color: var(--ColorPrimario);
+    clip-path: polygon(0 0,100% 0,100% calc(100% - 90px),50% 100%,0 calc(100% - 90px));
+}
+*/
+main .presentacion
+{
+    width: 100%;
+    min-width: 350px;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 200px auto;
+    padding: 0rem 2rem 2rem 2rem;
+}
+main .presentacion .presentacion__informacion
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    text-align: center;
+}
+main .presentacion .presentacion__informacion .Nombre
+{
+    font-size: 3.8rem;
+    font-weight: 900;
+    line-height: 45px;
+}
+main .presentacion .presentacion__informacion  span
+{
+    font-weight: 800;
+    color: var(--ColorPrimario);
+    font-size: 2.5rem;
+    line-height: 35px;
+    margin-bottom: 20px;
+}
+main .presentacion .presentacion__informacion .Descripcion
+{
+    width: 100%;
+    max-width: 700px;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+main .presentacion .presentacion__fotografia
+{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main .presentacion .presentacion__fotografia img
+{
+    width: 50%;
+    max-width: 350px;
+    height: auto;
+    border-radius: 50%;
+    
+}
