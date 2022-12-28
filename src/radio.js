@@ -27,7 +27,7 @@ async function  ObtenerRadio ()
 let intervaloActualizacion = 5000; // Intervalo de actualización inicial de 5 segundos
 let IDCancionActual = 0; // ID de la canción actual
 let PermisoActulizar = true; // Permiso para actualizar la canción
-
+let RadioPausado = false; // Si la radio esta pausada
 
 async function Logica() {
     if (PermisoActulizar == true) {
@@ -65,7 +65,7 @@ async function Logica() {
             }
 
             oyentes.textContent = Oyentes;
-            if (remaining >= 20) {
+            if (remaining > 30) {
                 intervaloActualizacion = 20000;
             } else if (remaining <= 30) {
                 intervaloActualizacion = 5000;
@@ -89,14 +89,20 @@ EtiquetaAudioEdgar.addEventListener("pause", ()=>
     console.log("Se pauso la radio");
     EtiquetaAudioEdgar.pause();
     PermisoActulizar = false;
+    RadioPausado = true;
 });
 //Detectar cuando el usuario le da play a la radio
 EtiquetaAudioEdgar.addEventListener("play", ()=> 
 {
-    console.log("Se reproducio la radio");
-    EtiquetaAudioEdgar.play();
-    PermisoActulizar = true;
-    Logica();
+    if (RadioPausado == true) 
+    {
+        console.log("Se reproducio la radio");
+        EtiquetaAudioEdgar.play();
+        PermisoActulizar = true;
+        RadioPausado = false;
+        Logica();
+    }
+    
 });
 
 

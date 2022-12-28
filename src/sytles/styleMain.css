@@ -167,6 +167,7 @@ main .presentacion .presentacion__informacion .Nombre
     font-size: 3.8rem;
     font-weight: 900;
     line-height: 45px;
+    top: 20px;
 }
 main .presentacion .presentacion__informacion  span
 {
@@ -181,7 +182,7 @@ main .presentacion .presentacion__informacion .Descripcion
     width: 100%;
     max-width: 700px;
     font-size: 1.5rem;
-    font-weight: 500;
+    font-weight: 400;
 }
 
 main .presentacion .presentacion__fotografia
