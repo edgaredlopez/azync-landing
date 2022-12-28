@@ -84,7 +84,7 @@ main .MainRadio .MainRadio__CajaReproductor
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 3px solid var(--ColorCeleste); 
+    border: 3px solid var(--ColorVerde); 
     border-radius: 20px; 
     box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.274);
 }
@@ -105,14 +105,24 @@ main .MainRadio .MainRadio__CajaReproductor p
     color: var(--ColorBlancoTexto);
     text-align: center;
 }
+#title
+{
+    color: var(--ColorVerde);
+    font-weight: 800;
+    font-style: italic;
+}
 main .MainRadio .MainRadio__CajaReproductor audio
 {
     width: 90%;
     height: 50px;
     margin-top: 5px;
     border-radius: 10px;
-    background-color: var(--ColorCeleste);
+    background-color: var(--ColorVerde);
 }
+
+audio::-webkit-media-controls-timeline {
+    display: none !important;
+  }
 main .MainRadio .MainRadio__CajaReproductor .Oyentes
 {
     font-size: 1.4rem;
