@@ -61,7 +61,7 @@
 
     <section class="MainRadio">
       <h2>Radio Edbyte 24/7</h2>
-      <p class="DescripcionGeneralRadio">Una radio diseñada para trabajar y concentrarse. Disponible 24/7 con las mejores melodías, completamente en vivo </p>
+      <p class="DescripcionGeneralRadio">Una radio diseñada para trabajar y concentrarse. Disponible 24/7 con las mejores melodías, completamente en VIVO y en DIRECTO... </p>
       
       <div class="MainRadio__CajaReproductor" id="MainRadio__CajaReproductor">
         <img class="cover" id="cover"
@@ -71,9 +71,12 @@
         <p id="artist">Artista</p>
         <p id="album">Album</p>
     
-        <audio controls>
-          <source id="direccionAudioRadio" src="https://coderadio-admin.freecodecamp.org/radio/8010/radio.mp3" type="audio/mpeg">
+
+        <audio  aria-label="audio" controls crossorigin="anonymous"  id="EtiquetaAudio" src="https://coderadio-relay-nyc.freecodecamp.org/radio/8010/low.mp3" __idm_id__="65538">
+          <track kind="captions">
         </audio>
+      
+        
         <p class="Oyentes">Oyentes en vivo: <span id="oyentes">50</span></p>
       </div>
 
