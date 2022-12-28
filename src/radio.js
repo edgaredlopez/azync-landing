@@ -88,6 +88,8 @@ EtiquetaAudioEdgar.addEventListener("pause", ()=>
 {
     console.log("Se pauso la radio");
     EtiquetaAudioEdgar.pause();
+    EtiquetaAudioEdgar.src = '';
+    EtiquetaAudioEdgar.currentTime = 0;
     PermisoActulizar = false;
     RadioPausado = true;
 });
