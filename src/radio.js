@@ -40,8 +40,8 @@ async function  ObtenerRadio ()
 
 let intervaloActualizacion = 5000; // Intervalo de actualización inicial de 5 segundos
 let IDCancionActual = 0; // ID de la canción actual
-let PermisoActulizar = true; // Permiso para actualizar la canción
-let RadioPausado = false; // Si la radio esta pausada
+let PermisoActulizar = false; // Permiso para actualizar la canción
+let RadioPausado = true; // Si la radio esta pausada
 
 
 async function Logica() {
