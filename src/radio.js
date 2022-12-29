@@ -132,7 +132,7 @@ EtiquetaAudioEdgar.addEventListener("play", ()=>
 // Detecta cuando el usuario abandona la página o cambia a otra pestaña
 document.addEventListener("visibilitychange", function()
  {
-    if (document.hidden) 
+    if (document.hidden && PermisoActulizar == true  && RadioPausado == false) 
     {
         EtiquetaAudioEdgar.play();
     }
