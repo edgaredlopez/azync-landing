@@ -10,13 +10,16 @@
 */
 :root
 {
-    --ColorFondo: #ffffff;
-    --ColorPrimario: #45bce4;
-    --ColorSecundario: ##45bce4;
-    --ColorTerciario: #2ca6f77a;
-    --ColoAzulMarino:#121f3d;
-    --ColorTexto: #000000;
-    --ColorTextoSecundario: #5c5c5c;
+    --ColorFondo: #121f3d;
+    --ColorFondoOscuro:#191d28;
+
+    --ColorPrimario: #24385b;
+    --SecundarioCeleste: #33b1ff;
+    --SecundarioVerde: #98ca3f;
+    --ColorBlanco: #ffffff;
+    --ColorNegro: #000000;
+    --ColorTexto: #ffffff;
+    --ColorTextoAResaltar: #33b1ff;
 }
 *
 {
@@ -33,12 +36,12 @@ html
 header
 {
     width: 100%;
-    min-width: 350px;
+    min-width: 320px;
     padding: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    background-color: var(--ColorFondoOscuro);
 }
 header .logoredes
 {
@@ -65,61 +68,55 @@ header .logoredes .redes
     align-items: end;
     margin-right: 15px;
 }
-header .redes a
+header .logoredes .redes a
 {
-    text-decoration: none;
-    width: 2rem;
-    height: 2rem;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    margin-right: 1rem;
+    margin-right: 8px;
+    color: var(--SecundarioCeleste);
 }
-header .redes .facebook
+header .logoredes .redes a:hover
 {
-    background-image: url("../assets/icons/facebook.png");
-}
-header .redes .whatsapp
-{
-    background-image: url("../assets/icons/whatsapp.png");
-}
-header .redes .github
-{
-    background-image: url("../assets/icons/github.png");
-}
-header .redes .linkedin
-{
-    background-image: url("../assets/icons/linkedin.png");
-}
-header .redes .instagram
-{
-    background-image: url("../assets/icons/instagram.png");
+    color: var(--ColorBlanco);
 }
 
 
 header .menu
 {
     width: 100%;
-    max-width: 420px;
+    max-width: 500px;
+    min-width: 320px;
+    margin-top: 20px;
     display: flex;
-    flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    width: 100%;
-    min-width: 350px;
-    margin-top: 1rem;
+
+    background-color: var(--ColorNegro);
+    padding: 5px;
+    position: fixed;
+    z-index: 50;
+    bottom: 0;
 }
-header .menu li 
+header .menu li a
 {
     list-style: none;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 1fr;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    color: var(--ColorTexto);
 }
-header .menu a
+header .menu li a
 {
     text-decoration: none;
-    color: var(--ColorTexto);
     font-size: 1.6rem;
-    font-weight: 600;
+    font-weight: 500;
 }
+header .menu li :hover
+{
+    color: var(--SecundarioCeleste);
+}
+
 
 
 
@@ -130,28 +127,35 @@ header .menu a
 main
 {
     position: relative;
-}
-/*
-main .ParaFondoDiagonal
-{
     display: flex;
-    position: absolute;
-    height: 200px;
-    width: 100%;
-    top: 500px;
-    z-index: -1;
-    background-color: var(--ColorPrimario);
-    clip-path: polygon(0 0,100% 0,100% calc(100% - 90px),50% 100%,0 calc(100% - 90px));
+    flex-direction: column;
 }
-*/
+
 main .presentacion
 {
     width: 100%;
-    min-width: 350px;
+    min-width: 320px;
+    height: 500px;
     display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 200px auto;
-    padding: 0rem 2rem 2rem 2rem;
+    position: relative;
+    grid-template-columns:  1fr;
+    grid-template-rows: auto auto;
+    padding:2rem 2rem 40rem 2rem;
+    background-color: var(--ColorFondoOscuro);
+}
+main .presentacion .presentacion__fotografia
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+main .presentacion .presentacion__fotografia img
+{
+    width: 65%;
+    height: auto;
+    max-width: 350px;
+    border-radius: 50%;
 }
 main .presentacion .presentacion__informacion
 {
@@ -164,17 +168,18 @@ main .presentacion .presentacion__informacion
 }
 main .presentacion .presentacion__informacion .Nombre
 {
-    font-size: 3.8rem;
+    font-size: 3.5rem;
     font-weight: 900;
-    line-height: 45px;
-    top: 20px;
+    line-height: 35px;
+    color: var(--ColorTexto);
 }
 main .presentacion .presentacion__informacion  span
 {
     font-weight: 800;
-    color: var(--ColorPrimario);
+    color: var(--ColorTextoAResaltar);
     font-size: 2.5rem;
-    line-height: 35px;
+    line-height: 25px;
+    margin-top: 10px;
     margin-bottom: 20px;
 }
 main .presentacion .presentacion__informacion .Descripcion
@@ -183,20 +188,39 @@ main .presentacion .presentacion__informacion .Descripcion
     max-width: 700px;
     font-size: 1.5rem;
     font-weight: 400;
+    color: var(--ColorTexto);
 }
 
-main .presentacion .presentacion__fotografia
-{
-    margin-top: 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-main .presentacion .presentacion__fotografia img
-{
-    width: 50%;
-    max-width: 350px;
-    height: auto;
-    border-radius: 50%;
-    
+
+
+
+
+
+
+/*Para responsive */
+
+
+@media screen and (min-width: 450px) {
+    main .presentacion {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        padding:2rem 2rem 2rem 2rem;
+    }
+
+    header .menu li a{
+        display: flex;
+    }
+
+    header .menu li svg {
+        margin-right: 5px;
+    }
+
+    header .menu  {
+        background-color: transparent;
+        padding: 0px;
+        position: relative;
+        z-index: 0;
+        bottom: unset;
+    }
+
 }
