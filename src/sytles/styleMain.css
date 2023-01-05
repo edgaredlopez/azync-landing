@@ -135,12 +135,12 @@ main .presentacion
 {
     width: 100%;
     min-width: 320px;
-    height: 500px;
+    height: 600px;
     display: grid;
     position: relative;
     grid-template-columns:  1fr;
-    grid-template-rows: auto auto;
-    padding:2rem 2rem 40rem 2rem;
+    grid-template-rows: auto 1fr;
+    padding:2rem 2rem 2rem 2rem;
     background-color: var(--ColorFondoOscuro);
 }
 main .presentacion .presentacion__fotografia
